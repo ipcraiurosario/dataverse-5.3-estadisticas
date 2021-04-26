@@ -1,0 +1,9 @@
+language: java
+jdk:
+<<<<<<< HEAD
+  - openjdk8
+=======
+  - openjdk11
+>>>>>>> dataverse-5.3/master
+script: mvn -DcompilerArgument=-Xlint:unchecked test -P all-unit-tests
+after_success: mvn jacoco:report coveralls:report 
